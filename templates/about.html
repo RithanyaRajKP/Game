@@ -1,0 +1,21 @@
+{% extends 'basic.html'%}
+{% block content %}
+<br>
+    <center>
+        <form action="/home/" method="POST">
+            {% csrf_token %}
+          <div class="container">
+              <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Help</div>
+                      <div class="card-body">
+                        <p class="card-text"> Enter a number between 1 to 10,
+                            if you guess right you win else you loose and need to accept the challenge.</p>
+                      </div>
+              </div>
+          </div>
+
+           <h1 align="center"> <button class="btn btn-info">
+           <a href="/">Got it!</a></button></h1>
+        </form>
+    </center>
+{% endblock %}
